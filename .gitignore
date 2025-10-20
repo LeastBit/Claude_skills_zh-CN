@@ -1,0 +1,44 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.dist/
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+.cache/
+.mypy_cache/
+.pytype/
+.pytest_cache/
+
+# OS/Editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Generated artifacts
+bundle.html
+*.pdf~
+*.tmp
+*.bak
