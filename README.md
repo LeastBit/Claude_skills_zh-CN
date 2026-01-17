@@ -1,139 +1,78 @@
-# 中文版本说明
+# Claude Skills 中文版
 
-亲爱的开发者们，我刚刚完成了 [Anthropic Skills](https://github.com/anthropics/skills) 仓库的全量中文化整理，欢迎前往我的译文仓库（保留原始目录结构，并采用“英文名称_中文名称”的命名方式）免费下载使用。无论你想快速了解 Claude 技能体系的最佳实践，还是需要直接上手 Word/PDF/PPTX/XLSX 处理脚本，这份中文版都能帮你省去大量摸索时间。
+[English](https://github.com/anthropics/skills) | [中文](./README.md)
 
-亮点速览：
-- 🧩 **原汁原味的官方示例**：完整保留算法艺术、品牌规范、Slack GIF、MCP 服务器等全部技能。  
-- 📄 **文档技能全译本**：OOXML、docx-js、HTML 转 PPT 流程、PDF 表单填写等高级指南均已翻译补充。  
-- 📦 **即取即用**：学习后即可在 Claude Code、Claude.ai 或 API 中运用，快速体验技能生态。  
+这是一个经过整理和中文化的 [Anthropic Skills](https://github.com/anthropics/skills) 仓库。无论你是想快速了解 Claude 技能体系的最佳实践，还是需要直接上手 Word/PDF/PPTX/XLSX 处理脚本，这份中文版都能帮你省去大量摸索时间。
 
-如果你正在搭建企业内部 Copilot、需要示例脚本做二次开发，或者想学习 Anthropic 的技能设计模式，这份中文版资料会是绝佳起点。欢迎点赞、转发或 PR，一起把更多高质量的中文 AI 开发资料带给社区！
-# 学习笔记与实用场景
+本仓库保留了原始目录结构，并对说明文档进行了全面的汉化，旨在帮助中文开发者更好地利用 Claude 的强大能力。
 
-- 推荐阅读： [study-notes_学习笔记.md](./study-notes_学习笔记.md)
-- 内容包括学习路径、组合 Playbook、端到端实战与最佳实践汇总
+## 📖 项目目录结构
 
-# 技能库
+```text
+.
+├── README.md               项目说明文档
+├── skills/                 技能集合目录
+│   ├── algorithmic-art/    算法艺术生成
+│   ├── brand-guidelines/   品牌指南助手
+│   ├── canvas-design/      Canvas 平面设计
+│   ├── doc-coauthoring/    文档共创引导
+│   ├── docx/               Word 文档处理
+│   ├── frontend-design/    前端界面设计
+│   ├── internal-comms/     内部沟通文案
+│   ├── mcp-builder/        MCP 服务器构建
+│   ├── pdf/                PDF 处理工具箱
+│   ├── pptx/               PPT 演示文稿处理
+│   ├── skill-creator/      技能创建指南
+│   ├── slack-gif-creator/  Slack GIF 生成
+│   ├── theme-factory/      主题样式工厂
+│   ├── web-artifacts-builder/ Web 制品构建器
+│   ├── webapp-testing/     Web 应用测试
+│   └── xlsx/               Excel 表格处理
+├── spec/                   规范文档
+│   └── agent-skills-spec.md 代理技能规范
+└── template/               模板文件
+    ├── SKILL_zh-CN.md      中文技能模板
+    └── SKILL.md            英文技能模板
+```
 
-技能是由说明、脚本和资源组成的文件夹，Claude 会按需加载它们，以在特定任务上提升表现。无论是根据你公司的品牌规范生成文档，遵循你组织特定流程进行数据分析，还是自动化个人事务，技能都能教会 Claude 以可复用的方式完成任务。
+## 技能库详解
 
-想进一步了解，请参阅：
-- [什么是技能？](https://support.claude.com/en/articles/12512176-what-are-skills)
-- [在 Claude 中使用技能](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
-- [如何创建自定义技能](https://support.claude.com/en/articles/12512198-creating-custom-skills)
-- [通过 Agent Skills 让智能体走向真实世界](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+技能（Skills）是由说明、脚本和资源组成的文件夹，Claude 会按需加载它们以完成特定任务。以下是本仓库包含的所有技能及其作用：
 
-# 关于此代码库
+### 🎨 创意与设计
+*   **algorithmic-art (算法艺术)**: 使用 p5.js 创建带有种子随机性和交互式参数探索的算法艺术，注重生成过程与美学哲学的结合。
+*   **canvas-design (平面设计)**: 基于设计哲学创作精美的 .png 与 .pdf 视觉作品，适用于海报、艺术品或极简主义设计。
+*   **frontend-design (前端设计)**: 创建独特、生产级别的高质量前端界面，避免千篇一律的 AI 审美，注重排版、色彩与动效。
+*   **slack-gif-creator (Slack GIF)**: 生成符合 Slack 尺寸和文件大小限制的优化动图，包含动画原理与优化工具。
+*   **theme-factory (主题工厂)**: 提供预设的专业主题（颜色/字体配置）或即时生成新主题，可一键应用于幻灯片、文档等产出物。
 
-该代码库收录了 Claude 技能体系的示例技能，展示了技能能够实现的可能性。这些示例覆盖多个方向：从创意类应用（艺术、音乐、设计），到技术任务（网页应用测试、MCP 服务器生成），再到企业场景流程（内部沟通、品牌等）。
+### 🛠️ 开发与构建
+*   **mcp-builder (MCP 构建器)**: 指导如何构建高质量的 MCP（模型上下文协议）服务器，帮助 Claude 通过工具与外部 API 或数据源交互。
+*   **web-artifacts-builder (Web 制品构建)**: 使用 React、Tailwind CSS 和 shadcn/ui 构建复杂的多组件 HTML 成品，支持状态管理与现代前端实践。
+*   **webapp-testing (Web 测试)**: 借助 Playwright 对本地网页应用执行 UI 验证、调试、截图及日志捕获。
 
-每个技能都以独立文件夹的形式存在，包含一份 `SKILL.md` 文件，记录 Claude 所需的指令与元数据。欢迎浏览这些示例，为你的自定义技能汲取灵感，或了解不同的技能设计模式与思路。
+### 企业与沟通
+*   **brand-guidelines (品牌指南)**: 自动应用 Anthropic 官方品牌色与字体（或其他自定义品牌）到各类文档与设计中，确保品牌一致性。
+*   **doc-coauthoring (文档共创)**: 引导用户通过结构化的工作流程（上下文收集 -> 优化结构 -> 读者测试）来协作撰写高质量文档。
+*   **internal-comms (内部沟通)**: 提供撰写各类内部沟通文档（如状态报告、3P 更新、公司简报）的模板与最佳实践。
 
-本仓库中的示例技能采用开源许可（Apache 2.0）。我们还在 [`document-skills/`](./document-skills/) 文件夹中附带了支撑 [Claude 文档能力](https://www.anthropic.com/news/create-files) 的文档生成与编辑技能。这些技能虽然是源代码开放，但并非开源；我们希望将其作为参考提供给开发者，以展示在真实生产环境中运行的复杂技能是如何设计的。
+### 文档处理
+*   **docx (Word 处理)**: 创建、编辑与分析 Word 文档，支持修订追踪、批注管理、格式保留和文本提取。
+*   **pdf (PDF 处理)**: 全面的 PDF 工具箱，支持提取文本与表格、创建新 PDF、合并/拆分文档、填写表单及 OCR 识别。
+*   **pptx (PPT 处理)**: 创建、编辑与分析 PowerPoint 演示文稿，支持基于 HTML 的幻灯片生成、版式调整与模板应用。
+*   **xlsx (Excel 处理)**: 创建、编辑与分析 Excel 表格，支持公式计算（需 LibreOffice）、格式化、数据分析与可视化。
 
-**注意：** 这些技能仅用于参考与学习，主要演示通用能力，而非特定组织的工作流或敏感内容。
+###  元技能
+*   **skill-creator (技能创建)**: 指导如何设计、初始化并打包一个新的高效技能，扩展 Claude 的专业能力。
+
+## 如何使用
+
+1.  **浏览与学习**: 阅读 `skills/` 目录下各个技能的 `SKILL.md` 文件，了解其工作原理和提示词设计模式。
+2.  **直接调用**: 如果你在支持 MCP 或插件的环境中（如 Claude Code），可以直接安装并调用这些技能。
+3.  **参考开发**: 使用这些代码作为蓝本，开发你自己的企业级 Agent 技能。
 
 ## 免责声明
 
-**这些技能仅用于演示与教育目的。** 虽然 Claude 中可能提供部分类似能力，但你实际获得的实现方式和行为，可能与这些示例存在差异。这些示例旨在展示可能性与设计模式。在关键任务中依赖技能之前，请务必在你的环境中充分测试。
+这些技能仅用于演示与教育目的。虽然 Claude 中可能提供部分类似能力，但你实际获得的实现方式和行为，可能与这些示例存在差异。在关键任务中依赖技能之前，请务必在你的环境中充分测试。
 
-# 示例技能
-
-该仓库囊括了展示多元能力的示例技能：
-
-## 创意设计
-- **algorithmic-art** —— 使用带种子随机性的 p5.js，通过流场和粒子系统生成算法艺术
-- **canvas-design** —— 基于设计哲学生成精美的 .png 与 .pdf 视觉作品
-- **slack-gif-creator** —— 生成满足 Slack 尺寸约束的动图
-
-## 开发与技术
-- **artifacts-builder** —— 使用 React、Tailwind CSS 与 shadcn/ui 组件构建复杂的 claude.ai HTML 成品
-- **mcp-server** —— 指导如何创建高质量的 MCP 服务器，以整合外部 API 与服务
-- **webapp-testing** —— 借助 Playwright 对本地网页应用执行 UI 验证与调试
-
-## 企业与沟通
-- **brand-guidelines** —— 应用 Anthropic 官方品牌色与字体到各类产出物
-- **internal-comms** —— 撰写内部沟通材料，如状态更新、内部刊物与常见问题
-- **theme-factory** —— 使用 10 套专业预设主题，或即时生成自定义主题以美化产出物
-
-## 元技能
-- **skill-creator** —— 指导如何设计扩展 Claude 能力的高效技能
-- **template-skill** —— 创建新技能时可用作起点的基础模板
-
-# 文档技能
-
-`document-skills/` 子目录收录的是 Anthropic 为帮助 Claude 生成各类文档格式而设计的技能，展示了处理复杂文件格式与二进制数据的高级范式：
-
-- **docx** —— 创建、编辑与分析 Word 文档，支持修订、批注、格式保持与文本抽取
-- **pdf** —— 全面的 PDF 工具箱，可提取文本与表格、创建新 PDF、合并/拆分文档并处理表单
-- **pptx** —— 创建、编辑与分析 PowerPoint 演示文稿，支持版式、模板、图表与自动化幻灯片生成
-- **xlsx** —— 创建、编辑与分析 Excel 表格，支持公式、格式、数据分析与可视化
-
-**重要声明：** 这些文档技能是按时间点截取的版本，当前并未持续维护或更新。Claude 已预置包含这些技能的版本。我们提供它们主要用于参考，帮助开发者了解 Anthropic 如何设计能够处理二进制文件格式与文档结构的复杂技能。
-
-# 在 Claude Code、Claude.ai 与 API 中体验
-
-## Claude Code
-你可以在 Claude Code 中运行以下命令，将本仓库注册为 Claude Code Plugin 市场源：
-```
-/plugin marketplace add anthropics/skills
-```
-
-接着安装特定技能集：
-1. 选择 `Browse and install plugins`
-2. 选择 `anthropic-agent-skills`
-3. 选择 `document-skills` 或 `example-skills`
-4. 点击 `Install now`
-
-或者直接安装以下任一插件：
-```
-/plugin install document-skills@anthropic-agent-skills
-/plugin install example-skills@anthropic-agent-skills
-```
-
-安装插件后，只需提及技能名称即可调用。例如，若你从市场安装了 `document-skills` 插件，可以在 Claude Code 中请求：“使用 PDF 技能提取 path/to/some-file.pdf 中的表单字段。”
-
-## Claude.ai
-
-这些示例技能在 Claude.ai 的付费方案中已默认提供。
-
-如需使用本仓库中的任意技能或上传自定义技能，请参阅[在 Claude 中使用技能](https://support.claude.com/en/articles/12512180-using-skills-in-claude#h_a4222fa77b)。
-
-## Claude API
-
-你可以通过 Claude API 使用 Anthropic 预构建的技能，并上传自定义技能。详见 [Skills API 快速入门](https://docs.claude.com/en/api/skills-guide#creating-a-skill)。
-
-# 创建基础技能
-
-技能的结构非常简单：一个文件夹，内含包含 YAML 前言区与指令的 `SKILL.md` 文件。本仓库中的 **template-skill** 可作为起点：
-
-```markdown
----
-name: my-skill-name
-description: A clear description of what this skill does and when to use it
----
-
-# My Skill Name
-
-[Add your instructions here that Claude will follow when this skill is active]
-
-## Examples
-- Example usage 1
-- Example usage 2
-
-## Guidelines
-- Guideline 1
-- Guideline 2
-```
-
-前言区只需要两个字段：
-- `name` —— 技能的唯一标识（使用小写字母，空格请用连字符）
-- `description` —— 对技能功能与适用场景的完整描述
-
-正文部分包含 Claude 在技能激活时会遵循的指令、示例与指南。更多细节请参阅[如何创建自定义技能](https://support.claude.com/en/articles/12512198-creating-custom-skills)。
-
-# 合作伙伴技能
-
-技能非常适合用于提升 Claude 使用特定软件的能力。随着我们看到越来越多来自合作伙伴的优秀技能案例，可能会在此精选展示：
-
-- **Notion** —— [Notion 面向 Claude 的技能集](https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0)
+本项目是 Anthropic Skills 的中文衍生版本，旨在促进中文社区的交流与学习。
