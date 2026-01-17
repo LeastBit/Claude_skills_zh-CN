@@ -1,12 +1,18 @@
-# Claude Skills 中文版
+# 中文版本说明
 
-[English](https://github.com/anthropics/skills) | [中文](./README.md)
+亲爱的开发者们，这是一个经过整理和中文化的 [Anthropic Skills](https://github.com/anthropics/skills) 仓库。无论你是想快速了解 Claude 技能体系的最佳实践，还是需要直接上手 Word/PDF/PPTX/XLSX 处理脚本，这份中文版都能帮你省去大量摸索时间。
 
-这是一个经过整理和中文化的 [Anthropic Skills](https://github.com/anthropics/skills) 仓库。无论你是想快速了解 Claude 技能体系的最佳实践，还是需要直接上手 Word/PDF/PPTX/XLSX 处理脚本，这份中文版都能帮你省去大量摸索时间。
+亮点速览：
+
+- 🧩 **原汁原味的官方示例**：完整保留算法艺术、品牌规范、Slack GIF、MCP 服务器等全部技能。
+- 📄 **文档技能全译本**：OOXML、docx-js、HTML 转 PPT 流程、PDF 表单填写等高级指南均已翻译补充。
+- 📦 **即取即用**：学习后即可在 Claude Code、Claude.ai 或 API 中运用，快速体验技能生态。
+
+如果你正在搭建企业内部 Copilot、需要示例脚本做二次开发，或者想学习 Anthropic 的技能设计模式，这份中文版资料会是绝佳起点。欢迎点赞、转发或 PR，一起把更多高质量的中文 AI 开发资料带给社区！
 
 本仓库保留了原始目录结构，并对说明文档进行了全面的汉化，旨在帮助中文开发者更好地利用 Claude 的强大能力。
 
-## 📖 项目目录结构
+## 项目目录结构
 
 ```text
 .
@@ -39,14 +45,14 @@
 
 技能（Skills）是由说明、脚本和资源组成的文件夹，Claude 会按需加载它们以完成特定任务。以下是本仓库包含的所有技能及其作用：
 
-### 🎨 创意与设计
+### 创意与设计
 *   **algorithmic-art (算法艺术)**: 使用 p5.js 创建带有种子随机性和交互式参数探索的算法艺术，注重生成过程与美学哲学的结合。
 *   **canvas-design (平面设计)**: 基于设计哲学创作精美的 .png 与 .pdf 视觉作品，适用于海报、艺术品或极简主义设计。
 *   **frontend-design (前端设计)**: 创建独特、生产级别的高质量前端界面，避免千篇一律的 AI 审美，注重排版、色彩与动效。
 *   **slack-gif-creator (Slack GIF)**: 生成符合 Slack 尺寸和文件大小限制的优化动图，包含动画原理与优化工具。
 *   **theme-factory (主题工厂)**: 提供预设的专业主题（颜色/字体配置）或即时生成新主题，可一键应用于幻灯片、文档等产出物。
 
-### 🛠️ 开发与构建
+### 开发与构建
 *   **mcp-builder (MCP 构建器)**: 指导如何构建高质量的 MCP（模型上下文协议）服务器，帮助 Claude 通过工具与外部 API 或数据源交互。
 *   **web-artifacts-builder (Web 制品构建)**: 使用 React、Tailwind CSS 和 shadcn/ui 构建复杂的多组件 HTML 成品，支持状态管理与现代前端实践。
 *   **webapp-testing (Web 测试)**: 借助 Playwright 对本地网页应用执行 UI 验证、调试、截图及日志捕获。
