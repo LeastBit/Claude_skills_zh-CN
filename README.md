@@ -15,7 +15,7 @@
 ## 项目目录结构
 
 ```text
-.
+。
 ├── README.md               项目说明文档
 ├── skills/                 技能集合目录
 │   ├── algorithmic-art/    算法艺术生成
@@ -82,3 +82,5 @@
 这些技能仅用于演示与教育目的。虽然 Claude 中可能提供部分类似能力，但你实际获得的实现方式和行为，可能与这些示例存在差异。在关键任务中依赖技能之前，请务必在你的环境中充分测试。
 
 本项目是 Anthropic Skills 的中文衍生版本，旨在促进中文社区的交流与学习。
+
+关键词：Claude skills; skill; 中文版Claude skills教程; Anthropic Skills
